@@ -44,7 +44,7 @@ module.exports = new Script({
                 }
               }
             } else {
-              () => 'finish' 
+              console.log("not again")
             }
         }
     }
