@@ -26,9 +26,8 @@ module.exports = new Script({
     },
 
     saySomething: {
-        receive: (bot, message("what")) => {
-            const name = message.text;
-            return bot.say(`hi`)
+        receive: (bot) => {
+            return bot.say('Test')
                 .then(() => 'finish');
         }
     },
