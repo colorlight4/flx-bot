@@ -5,8 +5,15 @@ const Script = require('smooch-bot').Script;
 module.exports = new Script({
     processing: {
         prompt: (bot) => bot.say('Beep boop...'),
-        receive: () => 'processing'
+        receive: () => 'hi'
     },
+
+    hi: {
+        receive: () => {
+            return bot.say('Hi! I\'m Smooch Bot!')
+                .then(() => 'start');
+        }
+    }
 
     start: {
         receive: (bot) => {
