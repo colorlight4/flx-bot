@@ -5,15 +5,7 @@ const Script = require('smooch-bot').Script;
 module.exports = new Script({
     processing: {
         prompt: (bot) => bot.say('Beep boop...'),
-        receive: () => 'hi'
-    },
-
-    hi: {
-        prompt: () => bot.say('Hi'),
-        receive: (bot) => {
-            return bot.say('Hi')
-                .then(() => 'start');
-        }
+        receive: () => 'start'
     },
 
     start: {
@@ -29,16 +21,33 @@ module.exports = new Script({
             const name = message.text;
             return bot.setProp('name', name)
                 .then(() => bot.say(`Great! I'll call you ${name}`))
-                .then(() => 'saySomething');
+                .then(() => 'say');
         }
     },
 
-    saySomething: {
-        receive: (bot) => {
-            return bot.say('Test')
-                .then(() => 'finish');
+
+    say: {
+        receive: (bot, message) => {
+            // const name = message.text;
+
+            var name = message.text;
+            var obj = ["hi", "hello"]
+
+            function isInArray(value, array) {
+              return array.indexOf(value) > -1;
+            }
+
+            if ( isInArray( name, obj) ) {
+              for (var item of obj) {
+               if ( name == item ) {
+                  return bot.say(`I like you!`)
+                }
+              }
+            } else {
+              () => 'finish' 
+            }
         }
-    },
+    }
 
     finish: {
         receive: (bot, message) => {
