@@ -9,7 +9,7 @@ module.exports = new Script({
     },
 
     hi: {
-        prompt: (bot) => bot.say('Hi'),
+        prompt: () => bot.say('Hi'),
         receive: (bot) => {
             return bot.say('Hi')
                 .then(() => 'start');
