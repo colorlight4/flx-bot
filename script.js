@@ -9,10 +9,8 @@ module.exports = new Script({
     },
 
     hi: {
-        receive: () => {
-            return bot.say('Hi! I\'m Smooch Bot!')
-                .then(() => 'start');
-        }
+        bot.say('Hi! I\'m Smooch Bot!')
+            .then(() => 'start');
     }
 
     start: {
