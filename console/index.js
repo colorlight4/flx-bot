@@ -34,7 +34,30 @@ const script = new Script({
             const name = message.text.trim();
             bot.setProp('name', name);
             return bot.say(`I'll call you ${name}! Great!`)
-                .then(() => 'finish');
+                .then(() => 'say');
+        }
+    },
+
+    say: {
+        receive: (bot, message) => {
+            // const name = message.text;
+
+            var name = message.text; //lodash to trim all in putt to one chrakter case (e.g. lower or UPPER)
+            var obj = ["hi", "hello"]
+
+            function isInArray(value, array) {
+              return array.indexOf(value) > -1;
+            }
+
+            if ( isInArray( name, obj) ) {
+              for (var item of obj) {
+               if ( name == item ) {
+                  return bot.say(`I like you!`)
+                }
+              }
+            } else {
+              console.log("not again")
+            }
         }
     },
 

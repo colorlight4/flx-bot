@@ -47,7 +47,7 @@ module.exports = new Script({
               console.log("not again")
             }
         }
-    }
+    },
 
     finish: {
         receive: (bot, message) => {
