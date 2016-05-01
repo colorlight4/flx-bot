@@ -51,20 +51,6 @@ module.exports = new Script({
         }
     },
 
-    // hi: {
-    //     prompt: (bot) => {
-    //         return bot.say('Hi')
-    //                   .then(() => 'say');
-    //     }
-    // },
-
-    // hello: {
-    //     prompt: (bot) => {
-    //         return bot.say('Hello')
-    //                   .then(() => 'say');
-    //     }
-    // },
-
     finish: {
         receive: (bot, message) => {
             return bot.getProp('name')
