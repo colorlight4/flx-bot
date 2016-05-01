@@ -46,7 +46,7 @@ module.exports = new Script({
               }
             } else {
                 return bot.say(`you stupid pice of shit!`)
-                          .then(() => 'nope')
+                          .then(() => 'finish')
             }
         }
     },
