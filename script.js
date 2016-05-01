@@ -30,16 +30,16 @@ module.exports = new Script({
         receive: (bot, message) => {
             // const name = message.text;
 
-            var foo = message.text;
-            var answers = ["hi", "hello"]
+            var name = message.text;
+            var obj = ["hi", "hello"]
 
             function isInArray(value, array) {
               return array.indexOf(value) > -1;
             }
 
-            if ( isInArray(foo, answers)) {
-              for (var item of answers) {
-               if ( foo == item ) {
+            if ( isInArray( name, obj) ) {
+              for (var item of obj) {
+               if ( name == item ) {
                   return bot.say(`I like you!`)
                             .then(() => 'finish')
                 }
@@ -60,10 +60,10 @@ module.exports = new Script({
         }
     }
 
-    nope: {
-        prompt: (bot) => {
-            return bot.say('Sorry, i dont know this word.')
-                      .then(() => 'say');
-        }
-    }
+    // nope: {
+    //     prompt: (bot) => {
+    //         return bot.say('Sorry, i dont know this word.')
+    //                   .then(() => 'say');
+    //     }
+    // }
 });
