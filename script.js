@@ -46,7 +46,7 @@ module.exports = new Script({
               }
             } else {
                 return bot.say(`you stupid pice of shit!`)
-                          .then(() => 'finish')
+                          .then(() => 'nope')
             }
         }
     },
@@ -60,10 +60,10 @@ module.exports = new Script({
         }
     }
 
-    // nope: {
-    //     prompt: (bot) => {
-    //         return bot.say('Sorry, i dont know this word.')
-    //                   .then(() => 'say');
-    //     }
-    // }
+    nope: {
+        prompt: (bot) => {
+            return bot.say('Sorry, i dont know this word.')
+                      .then(() => 'say');
+        }
+    }
 });
