@@ -41,13 +41,27 @@ module.exports = new Script({
               // for (var item of answers) {
               //  if ( message == item ) {
                   return bot.say(`I like you!`)
-                            .then(() => 'finish')
+                            .then(() => '${message}')
               //   }
               // }
             } else {
                 return bot.say(`you stupid pice of shit!`)
                           .then(() => 'nope')
             }
+        }
+    },
+
+    hi: {
+        prompt: (bot) => {
+            return bot.say('Hi')
+                      .then(() => 'say');
+        }
+    },
+
+    hello: {
+        prompt: (bot) => {
+            return bot.say('Hello')
+                      .then(() => 'say');
         }
     },
 
