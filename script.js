@@ -38,12 +38,12 @@ module.exports = new Script({
             }
 
             if ( answers.indexOf(message) > -1 ) {
-              // for (var item of answers) {
-               // if ( message == item ) {
+              for (var item of answers) {
+               if ( message == item ) {
                   return bot.say(`I like you!`)
                             .then(() => 'finish')
-                // }
-              // }
+                }
+              }
             } else {
                 return bot.say(`you stupid pice of shit!`)
                           .then(() => 'nope')
