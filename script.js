@@ -41,12 +41,12 @@ module.exports = new Script({
               for (var item of obj) {
                if ( name == item ) {
                   return bot.say(`I like you!`)
-                            .then(() => 'finish')
+                            .then(() => 'finish');
                 }
               }
             } else {
                 return bot.say(`you stupid pice of shit!`)
-                          .then(() => 'nope')
+                          .then(() => 'nope');
             }
         }
     },
@@ -61,7 +61,9 @@ module.exports = new Script({
     },
 
     nope: {
-        prompt: (bot) =>  bot.say('Sorry, i dont know this word.'),
-        receive: () => 'say'
+        receive: (bot) => {
+            return bot.say('ask again')
+                .then(() => 'say');
+        }
     }
 });
