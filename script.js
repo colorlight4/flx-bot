@@ -37,7 +37,7 @@ module.exports = new Script({
               return array.indexOf(value) > -1;
             }
 
-            if ( answers.indexOf(message) > -1 ) {
+            if ( isInArray(message, answers)) {
               for (var item of answers) {
                if ( message == item ) {
                   return bot.say(`I like you!`)
