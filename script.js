@@ -30,20 +30,20 @@ module.exports = new Script({
         receive: (bot, message) => {
             // const name = message.text;
 
-            var name = message.text;
-            var obj = ["hi", "hello"]
+            var message = message.text;
+            var answers = ["hi", "hello"]
 
             function isInArray(value, array) {
               return array.indexOf(value) > -1;
             }
 
-            if ( isInArray( name, obj) ) {
-              for (var item of obj) {
-               if ( name == item ) {
+            if ( answers.indexOf(message) > -1 ) {
+              // for (var item of answers) {
+              //  if ( message == item ) {
                   return bot.say(`I like you!`)
                             .then(() => 'finish')
-                }
-              }
+              //   }
+              // }
             } else {
                 return bot.say(`you stupid pice of shit!`)
                           .then(() => 'nope')
