@@ -58,7 +58,7 @@ module.exports = new Script({
                         'teach me how to do anything else!'))
                 .then(() => 'finish');
         }
-    }
+    },
 
     nope: {
         prompt: (bot) =>  bot.say('Sorry, i dont know this word.'),
