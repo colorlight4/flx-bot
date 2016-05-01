@@ -62,7 +62,7 @@ module.exports = new Script({
 
     nope: {
         prompt: (bot) =>  bot.say('Sorry, i dont know this word.'),
-        receive: (bot) => 'say';
+        receive: (bot) => 'say'
         // receive: (bot) => {
         //     return bot.say('ask again')
         //         .then(() => 'askName');
