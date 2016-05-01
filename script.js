@@ -61,9 +61,11 @@ module.exports = new Script({
     },
 
     nope: {
-        receive: (bot) => {
-            return bot.say('ask again')
-                .then(() => 'say');
-        }
+        prompt: (bot) =>  bot.say('Sorry, i dont know this word.'),
+        receive: () => 'say'
+        // receive: (bot) => {
+        //     return bot.say('ask again')
+        //         .then(() => 'askName');
+        // }
     }
 });
