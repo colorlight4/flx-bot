@@ -39,10 +39,10 @@ module.exports = new Script({
 
             if ( answers.indexOf(message) > -1 ) {
               // for (var item of answers) {
-              //  if ( message == item ) {
+               // if ( message == item ) {
                   return bot.say(`I like you!`)
-                            .then(() => '${message}')
-              //   }
+                            .then(() => 'finish')
+                // }
               // }
             } else {
                 return bot.say(`you stupid pice of shit!`)
@@ -51,19 +51,19 @@ module.exports = new Script({
         }
     },
 
-    hi: {
-        prompt: (bot) => {
-            return bot.say('Hi')
-                      .then(() => 'say');
-        }
-    },
+    // hi: {
+    //     prompt: (bot) => {
+    //         return bot.say('Hi')
+    //                   .then(() => 'say');
+    //     }
+    // },
 
-    hello: {
-        prompt: (bot) => {
-            return bot.say('Hello')
-                      .then(() => 'say');
-        }
-    },
+    // hello: {
+    //     prompt: (bot) => {
+    //         return bot.say('Hello')
+    //                   .then(() => 'say');
+    //     }
+    // },
 
     finish: {
         receive: (bot, message) => {
